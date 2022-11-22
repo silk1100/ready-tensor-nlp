@@ -19,18 +19,18 @@ OUTPUT_TESTING = "outputs/testing_outputs/preds.csv"
 
 
 def read_config():
-    with open(DATA_CONFIG, 'r') as f:
+    with open(os.path.join(MAIN_DIR, DATA_CONFIG), 'r') as f:
         data = json.load(f)
     return data['inputDatasets']['textClassificationBaseMainInput']
 
 def write_error(source_script:str, msg: str, mode=None):
     if mode is None:
-        if os.path.exists(os.path.join(OUTPUT_ERRORS, "testing.txt")):
+        if os.path.exists(os.path.join(MAIN_DIR, OUTPUT_ERRORS, "testing.txt")):
             mode = 'a'
         else:
             mode = 'w'
 
-    with open(os.path.join(OUTPUT_ERRORS, f"{source_script}.txt"), mode) as f:
+    with open(os.path.join(MAIN_DIR, OUTPUT_ERRORS, f"{source_script}.txt"), mode) as f:
         f.write(msg)
 
 
