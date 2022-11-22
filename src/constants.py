@@ -9,9 +9,9 @@ DATA_TRAINING = "inputs/data/training/textClassificationBaseMainInput/clickbait_
 DATA_TESTING = "inputs/data/testing/textClassificationBaseMainInput/clickbait_test.csv"
 DATA_TESTING_KEY = "inputs/data/testing/textClassificationBaseMainInput/clickbait_test_key.csv"
 
-MODELS_ARTIFACT_PREPROCESS = "models/artifacts/preprocess_pipeline.p"
-MODELS_ARTIFACT_LABEL_PREPROCESS = "models/artifacts/preprocess_label_pipeline.p"
-MODELS_ARTIFACT_MODELS = "models/artifacts/model_pipeline.p"
+MODELS_ARTIFACT_PREPROCESS = "model/artifacts/preprocess_pipeline.p"
+MODELS_ARTIFACT_LABEL_PREPROCESS = "model/artifacts/preprocess_label_pipeline.p"
+MODELS_ARTIFACT_MODELS = "model/artifacts/model_pipeline.p"
 
 OUTPUT_ERRORS = "outputs/errors"
 OUTPUT_HPT = "outputs/hpt_errors"
