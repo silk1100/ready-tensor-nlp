@@ -30,7 +30,7 @@ MODELS_ARTIFACT_MODELS = "model/artifacts/model_pipeline.p"
 
 OUTPUT_ERRORS = "outputs/errors"
 OUTPUT_HPT = "outputs/hpt_errors"
-OUTPUT_TESTING = "outputs/testing_outputs/test_prediction.csv"
+OUTPUT_TESTING = "outputs/testing_outputs/test_predictions.csv"
 
 
 

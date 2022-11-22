@@ -12,7 +12,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install python3-pip -y && \
 COPY ./src/ /usr/src/
 RUN echo '#!/bin/bash\npython3 /usr/src/backend/train.py' > /usr/bin/train && chmod +x /usr/bin/train
 RUN echo '#!/bin/bash\npython3 /usr/src/backend/testing.py' > /usr/bin/test && chmod +x /usr/bin/test
-RUN echo '#!/bin/bash\npython3 /usr/src/frontend/app.py' > /usr/bin/serv && chmod +x /usr/bin/serv
+RUN echo '#!/bin/bash\npython3 /usr/src/frontend/app.py' > /usr/bin/serve && chmod +x /usr/bin/serve
 
 
 WORKDIR /opt/ml_vol

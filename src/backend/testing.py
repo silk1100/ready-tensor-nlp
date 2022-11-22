@@ -71,8 +71,7 @@ def main():
         X = df[constants.document_field].values
     
     ypred_p = model.predict_proba(X)
-    print(plmodel.classes_)
-    df_pred = pd.DataFrame(data=ypred_p, index=df.index, columns=[plmodel.classes_])
+    df_pred = pd.DataFrame(data=ypred_p, index=df.index, columns=plmodel.classes_)
     df_pred.to_csv(constants.OUTPUT_TESTING)
 
     if df_true is not None:
