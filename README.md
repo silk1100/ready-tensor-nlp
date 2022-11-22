@@ -21,4 +21,7 @@ All python scripts can be found within `./src/` directory.
 3. Run the training script.<br>
 `sudo docker run --rm --name <container-name> --mount source=<vname>,target=/opt/ml_vol <imagename> train`
 4. Check the testing results of the trained model. <br>
-`sudo docker run -v <vname>:/opt/ml_vol --rm <imagename> test`
+`sudo docker run --rm --name <container-name> --mount source=<vname>,target=/opt/ml_vol <imagename> test`
+5. To start up a server.<br>
+`sudo docker run -p 5000:5000 -d --rm --name <container-name> --mount source=<vname>,target=/opt/ml_vol <imagename> test` <br>
+Step 5 will start a service on [localhost](localhost:5000).

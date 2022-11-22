@@ -4,16 +4,16 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 import numpy as np
+from utils import write_error, read_data, read_config
 import joblib
 import os
 import constants
 
 
-
 def preprocess():
     # Read the training data
-    df = pd.read_csv(os.path.join(constants.MAIN_DIR, constants.DATA_TRAINING),
-         index_col=constants.id_field)
+    df = read_data(os.path.join(constants.MAIN_DIR, constants.MAIN_DATA_TRAINING), has_key=False)
+    df.set_index(constants.id_field, inplace=True)
 
     # Split data to have a validation set
     df_train, df_val = train_test_split(df, test_size=0.1)
@@ -44,7 +44,6 @@ def preprocess():
 
     with open(os.path.join(constants.MAIN_DIR, constants.MODELS_ARTIFACT_LABEL_PREPROCESS), 'wb') as f:
         joblib.dump(labelobj, f)
-
 
     return X_train, X_val
 
